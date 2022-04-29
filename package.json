@@ -1,0 +1,19 @@
+{
+  "name": "isproject",
+  "version": "1.0.0",
+  "description": "Progetto ingegneria del software 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mircoloo/ISproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mircoloo/ISproject/issues"
+  },
+  "homepage": "https://github.com/mircoloo/ISproject#readme"
+}
