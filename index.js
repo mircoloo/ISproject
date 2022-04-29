@@ -8,9 +8,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './HTMLpages/homepage.html'));
 });
 
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, './HTMLpages/profile.html')); 
+    
+});
 
+
+
+//GESISCE LE PAGINE CHE NON SONO VALIDE
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, './HTMLpages/error.html'));
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
