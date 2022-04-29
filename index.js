@@ -26,6 +26,7 @@ app.get('/profile', (req, res) => {
 });
 
 
+//PROVA GESTIONE RICHIESTE GET SU /search
 app.get('/search', function(req, res){
     console.log(util.inspect(req.headers, {showHidden: false, depth: null}))
     console.log(util.inspect(req.url, {showHidden: false, depth: null}))
@@ -33,6 +34,7 @@ app.get('/search', function(req, res){
     res.status(200).send('Check console!');
 });
 
+//PROVA GESTIONE RICHIESTE POST
 app.post('/subscribe', function(req, res){
     console.log(util.inspect(req.headers, {showHidden: false, depth: null}))
     console.log(util.inspect(req.params, {showHidden: false, depth: null}))
