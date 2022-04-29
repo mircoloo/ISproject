@@ -40,6 +40,7 @@ app.post('/subscribe', function(req, res){
     console.log(util.inspect(req.params, {showHidden: false, depth: null}))
     res.status(201).send('You are now subscribed!');
     console.log(req.headers.val);
+    
 });
 
 //GESISCE LE PAGINE CHE NON SONO VALIDE
