@@ -19,7 +19,9 @@
   "homepage": "https://github.com/mircoloo/ISproject#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mongoose": "^6.3.2"
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.2",
+    "session": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
