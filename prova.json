@@ -1,0 +1,24 @@
+[
+    {"persone": [ {
+        "id": 1,
+        "nome": "patrick",
+        "cognome": "rocca",
+        "eta": 20
+    },
+    {
+        "id": 2,
+        "nome": "stefano",
+        "cognome": "speranza",
+        "eta": 24
+    },
+    {
+        "id": 3,
+        "nome": "mirco",
+        "cognome": "bisoffi",
+        "eta": 22
+    }]}
+    
+   
+
+    
+]

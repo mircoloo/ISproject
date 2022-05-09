@@ -1,9 +1,10 @@
 {
   "name": "isproject",
   "version": "1.0.0",
-  "description": "Progetto ingegneria del software 2022",
+  "description": "PROGETTO INGEGNERIA DEL SOFTWARE 2022",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/mircoloo/ISproject/issues"
   },
-  "homepage": "https://github.com/mircoloo/ISproject#readme"
+  "homepage": "https://github.com/mircoloo/ISproject#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }

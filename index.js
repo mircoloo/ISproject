@@ -1,54 +1,27 @@
 
 const express = require('express')
+const mongoose = require('mongoose')
 const path = require('path')
-const util = require('util')
-const app = express()
+const persone = require('./prova.json')
+
 const port = 3000
+const app = express()
 
-app.use(express.static('public'))
+const static_path = path.join(__dirname, "/public")
 
-//GESTISCI TUTTE LE RICHIESTE
-app.all('/*', (req, res, next) =>{
-    console.log(req.url);
-    next();
+
+app.use(express.static(static_path))
+
+const Schema = mongoose.Schema;
+
+  
+
+app.get('/', (req, res) =>{
+    res.sendFile(path.join(__dirname, "/public/login.html"))
 });
-
-
-app.get('/', (req, res) => {
-    res.sendFile('homepage.html', {root: __dirname + "/public"});
-    
-    //res.json({ user: 'tobi' })
-
-});
-
-app.get('/profile', (req, res) => {
-    res.sendFile('profile.html', {root: __dirname + "/public"});
-});
-
-
-//PROVA GESTIONE RICHIESTE GET SU /search
-app.get('/search', function(req, res){
-    console.log(util.inspect(req.headers, {showHidden: false, depth: null}))
-    console.log(util.inspect(req.url, {showHidden: false, depth: null}))
-    console.log(util.inspect(req.query, {showHidden: false, depth: null}))
-    res.status(200).send('Check console!');
-});
-
-//PROVA GESTIONE RICHIESTE POST
-app.post('/subscribe', function(req, res){
-    console.log(util.inspect(req.headers, {showHidden: false, depth: null}))
-    console.log(util.inspect(req.params, {showHidden: false, depth: null}))
-    res.status(201).send('You are now subscribed!');
-    console.log(req.headers.val);
-    
-});
-
-//GESISCE LE PAGINE CHE NON SONO VALIDE
-app.get('/*', (req, res) => {
-    res.sendFile('error.html', {root: __dirname + "/public"});
-});
+ 
 
 app.listen(port, () => {
-    console.log(`App listening on port ${port}!`)
+    console.log(`Example app listening on port ${port}`)
 });
 
