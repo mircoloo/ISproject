@@ -15,9 +15,8 @@ app.use(express.static(path.join(__dirname, "/public")))
 app.use("/styles",  express.static(__dirname + '/public/stylesheets'));
 app.use("/scripts", express.static(__dirname + '/public/javascripts'));
 app.use("/images",  express.static(__dirname + '/public/images'));
-app.use(express.json());
 //app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended : false }));
+app.use(bodyParser.json());
 // login middleware
 app.use('/auth', (req,res, next) => {
     let item = {
@@ -92,6 +91,6 @@ app.use((req,res) =>{
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Listening on port ${port}`)
 });
 

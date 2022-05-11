@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-
+require('dotenv').config()
 
 // conenect to mongoDB
-const dbURI = 'mongodb+srv://mirco:123@isdatabase.psojv.mongodb.net/isDB?retryWrites=true&w=majority';
+const dbURI = process.env.DATABASE_URL
 mongoose.connect(dbURI)
     .then((result) => {
         console.log('connected to db')
