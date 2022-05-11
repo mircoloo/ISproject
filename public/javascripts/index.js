@@ -13,6 +13,6 @@ $(document).ready(function () {
         $(this).css("background-color", "red")
     }, function () {
         $(this).css("background-color", prevcolor)
-    });
+    }); 
 
 })
