@@ -5,7 +5,12 @@ const router = express.Router()
 
 
 router.get('/', (req, res) => {
-    res.render('login') 
+    if(req.query.valid  == 'false'){
+        console.log("passwor sbaglaita")
+    }
+
+
+    res.render('login')
 })
 
 module.exports = router

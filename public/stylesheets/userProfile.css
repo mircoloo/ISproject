@@ -1,0 +1,97 @@
+@import url("header.css");
+
+body{
+    margin: 0;
+    padding: 0;                 
+    font-family: 'Poppins', sans-serif;
+    background-color: green;
+}
+
+:root{
+    --blue: #287bff;
+    --white: #fff;
+    --violet: #7380ec;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --red: #ff7782; 
+    --gradient:  linear-gradient(45deg, #287bff, #fff);
+}
+
+header a:nth-child(1){
+    position: relative;
+}
+header a:nth-child(1)::after{
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 2px;
+    background-color: #287bff;
+    left: 20%;
+    bottom: 0;
+}
+
+.profile{
+    display: flex;
+    
+    align-items: flex-end;
+}
+
+.profile img{
+    margin: 1rem;
+    object-fit: cover;
+    width:230px;
+    height:230px;
+    border-radius: 50%;
+}
+
+.profile .name{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.informations{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grp{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #287bff;
+}
+
+.personal-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.container{
+    border-radius: 0.8rem;
+    background-color: var(--white);
+    margin: 0 2rem;
+    width: 90%;
+}
+
+.card{
+    background-color: var(--black2);
+    border-radius: .8rem;
+    margin: 20px;
+    width: 30%;
+}
+
+
+
+/* ANIMATIONS */
+
+header a:nth-child(1):hover::after{
+    width: 20%;
+    transition: .5s;
+}

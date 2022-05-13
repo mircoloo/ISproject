@@ -35,7 +35,6 @@ router.post('/', async (req, res) => {
 });
 
 //updating one user
-
 router.patch('/:id', getUser, async (req, res) => {
     if(req.body.email != null){
         res.user.email = req.body.email

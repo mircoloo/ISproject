@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
             if(user && user.password == password){
                 res.render("userProfile");
             }else{
-                res.render("login");
+                res.redirect("/?valid=false");
             }
             break;
         case 'Registrati':
@@ -34,6 +34,10 @@ router.post('/', async (req, res) => {
     }   
 
 })
+
+
+
+
 
 
 module.exports = router
