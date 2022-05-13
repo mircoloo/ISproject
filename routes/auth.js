@@ -26,8 +26,7 @@ router.post('/', async (req, res) => {
                     password: req.body.password
                 })
                 const newUser = await user.save();
-            
-                res.send("inserito nel database");
+                res.render("userProfile", {user: newUser});
             }else{
                 var messageError = "Email già presente"
                 res.render('login', {error: messageError})
