@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;                 
     font-family: 'Poppins', sans-serif;
-    background-color: green;
+    background-color: var(--violet);
 }
 
 :root{
@@ -30,6 +30,12 @@ header a:nth-child(1)::after{
     left: 20%;
     bottom: 0;
 }
+
+.section-title{
+    text-align: center;
+    color: black;
+}
+
 
 .profile{
     display: flex;
@@ -84,7 +90,8 @@ header a:nth-child(1)::after{
     background-color: var(--black2);
     border-radius: .8rem;
     margin: 20px;
-    width: 30%;
+    min-width: fit-content;
+    width: 200px;
 }
 
 
@@ -95,3 +102,14 @@ header a:nth-child(1):hover::after{
     width: 20%;
     transition: .5s;
 }
+
+
+@media only screen and (max-width: 500px){
+    .profile{
+        flex-direction: column;
+    }
+
+    .informations{
+        flex-direction: column;
+    }
+    .

@@ -11,9 +11,11 @@ router.post('/', async (req, res) => {
         case 'Accedi':
             user = await User.findOne({email: email})
             if(user && user.password == password){
-                res.render("userProfile");
+                res.render("userProfile", {user: user});
             }else{
-                res.redirect("/?valid=false");
+                //res.redirect("/?valid=false");
+                var messageError = "Credenziali non valide"
+                res.render('login', {error: messageError})
             }
             break;
         case 'Registrati':
@@ -27,7 +29,8 @@ router.post('/', async (req, res) => {
             
                 res.send("inserito nel database");
             }else{
-                res.send("Email già presente")
+                var messageError = "Email già presente"
+                res.render('login', {error: messageError})
             }
             
             break;
