@@ -11,7 +11,6 @@ const port = process.env.PORT || 3000
 const app = express()
 
 //MIDDLEWARES
-
 app.use("/styles",  express.static(__dirname + '/public/stylesheets'));
 app.use("/scripts", express.static(__dirname + '/public/javascripts'));
 app.use("/images",  express.static(__dirname + '/public/images'));
@@ -30,11 +29,13 @@ app.use(express.static(path.join(__dirname, "/public")))
 //ROUTER
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users');
-
+const authRouter = require('./routes/auth')
 //ROUTES
 app.use('/', indexRouter)
-
 app.use('/users', usersRouter);
+app.use('/auth', authRouter)
+
+
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
