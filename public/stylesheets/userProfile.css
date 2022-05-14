@@ -86,7 +86,7 @@ header a:nth-child(1)::after{
     border-radius: 0.8rem;
     background-color: var(--white);
     margin: 0 2rem;
-    width: 700px;
+    width: 60%;
 }
 
 .card{
@@ -99,7 +99,6 @@ header a:nth-child(1)::after{
 }
 
 .buttons{
-    
     margin: 1rem 1.2rem;
 }
 
@@ -112,7 +111,6 @@ header a:nth-child(1)::after{
 }
 
 .links{
-
     margin-bottom: 20px;
 }
 

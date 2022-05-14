@@ -11,17 +11,32 @@ $(document).ready(function () {
         $(this).css("background-color", "red")
     }, function () {
         $(this).css("background-color", prevcolor)
-    }); 
-
-
-
-    $("#info-modify-btn").click( () => {
-        $(".grp").css({"color": "blue"})
     });
 
 
-})
+
+    $("#info-modify-btn").click(() => {
+        $(".grp").css({ "color": "blue" })
+        let email = $("#email-span").text()
+        $.ajax({
+            url: "/users/" + email,
+            type: "PATCH",
+            data: {
+                nome: 'Emanuele',
+                telefono: "3453823432",
+            },
+            dataType: 'json',
+            success: () => {
+                
+            }
+    
+        })
+      
+    })
+    
+}); 
+//========== AJAX MODIFY REQUEST ===============
+
 
 
 //==========ALERT ON WRONG PASSWORD ===============
-

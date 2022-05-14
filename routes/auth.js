@@ -27,7 +27,9 @@ router.post('/', async (req, res) => {
                     name: "",
                     surname: "",
                     bikes: [],
-                    ebikes: []
+                    ebikes: [],
+                    indirizzo: String
+
                 })
                 const newUser = await user.save();
                 res.render("userProfile", {user: newUser});

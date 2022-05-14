@@ -35,6 +35,10 @@ app.use('/', indexRouter)
 app.use('/users', usersRouter);
 app.use('/auth', authRouter)
 
+app.patch('/ajax', (req, res) => {
+    console.log(req.body)
+    res.send(req.body)
+})
 
 
 app.listen(port, () => {

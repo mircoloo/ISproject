@@ -35,12 +35,21 @@ router.post('/', async (req, res) => {
 });
 
 //updating one user
-router.patch('/:id', getUser, async (req, res) => {
+router.patch('/:email', getUser, async (req, res) => {
     if(req.body.email != null){
         res.user.email = req.body.email
     }
     if(req.body.password != null){
         res.user.password = req.body.password
+    }
+    if(req.body.nome != null){
+        res.user.nome = req.body.nome
+    }
+    if(req.body.cognome != null){
+        res.user.cognome = req.body.cognome
+    }
+    if(req.body.telefono != null){
+        res.user.telefono = req.body.telefono
     }
 
     try{
@@ -53,7 +62,7 @@ router.patch('/:id', getUser, async (req, res) => {
 
 //deleting one user
 
-router.delete('/:id', getUser,async (req, res) => {
+router.delete('/:email', getUser,async (req, res) => {
     try{
         await res.user.remove()
         res.json({message: "user deleted"})
@@ -63,18 +72,18 @@ router.delete('/:id', getUser,async (req, res) => {
 });
 
 
-//middleware
+//================ Middleware ======================
 async function getUser(req, res, next){
     let user;
     try{
-        user = await User.findById(req.params.id)
+        user = await User.findOne({email:req.params.email})
+        console.log(user)
         if(user == null){
             return res.status(404).json({message: 'cannot find the user'})
         }
     }catch (err){
         return res.status(500).json({message: err.message})
     }
-
     res.user = user
     next()
 }
