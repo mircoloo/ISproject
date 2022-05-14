@@ -15,6 +15,7 @@ $(document).ready(function () {
 
 })
 
+$(".card").css({"background-color": "red"})
 //==========ALERT ON WRONG PASSWORD ===============
 
 var valid = queryParams.get("valid")

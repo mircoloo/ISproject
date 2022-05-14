@@ -26,9 +26,9 @@ header a:nth-child(1)::after{
     content: "";
     width: 60%;
     height: 2px;
-    background-color: #287bff;
+    background-color: white;
     left: 20%;
-    bottom: 0;
+    bottom: 3px;
 }
 
 .section-title{
@@ -66,7 +66,6 @@ header a:nth-child(1)::after{
     display: flex;
     flex-direction: column;
     margin: 20px;
-    background-color: #287bff;
 }
 
 .personal-info{
@@ -80,10 +79,14 @@ header a:nth-child(1)::after{
 }
 
 .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 0.8rem;
     background-color: var(--white);
     margin: 0 2rem;
-    width: 90%;
+    width: 600px;
 }
 
 .card{
@@ -92,6 +95,30 @@ header a:nth-child(1)::after{
     margin: 20px;
     min-width: fit-content;
     width: 200px;
+    position: relative;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 0;
+    justify-content: end;
+}
+
+.card button{
+    width: fit-content;
+}
+
+.links{
+
+    margin-bottom: 20px;
+}
+
+.links a{
+    margin-left: 10px;
+    color: #ff7782;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 
@@ -112,4 +139,4 @@ header a:nth-child(1):hover::after{
     .informations{
         flex-direction: column;
     }
-    .
+}

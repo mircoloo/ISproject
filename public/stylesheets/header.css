@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     padding: 0;
@@ -7,23 +9,23 @@ body{
 
 header{
     display: flex;
-    background-color: red;
+    background-color: #ff7782;
     justify-content: right;
 }
 
 header a{
     text-decoration: none;
-    background-color: white;
+    color: white;
     padding: 1rem;
     margin: 0 5px;
-    color: black;
     font-size: larger;
     font-weight: bold;
-
-    
-
 }
 
+header a:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
 
 
 
