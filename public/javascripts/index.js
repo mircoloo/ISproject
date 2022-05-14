@@ -13,14 +13,15 @@ $(document).ready(function () {
         $(this).css("background-color", prevcolor)
     }); 
 
+
+
+    $("#info-modify-btn").click( () => {
+        $(".grp").css({"color": "blue"})
+    });
+
+
 })
 
-$(".card").css({"background-color": "red"})
+
 //==========ALERT ON WRONG PASSWORD ===============
 
-var valid = queryParams.get("valid")
-if(valid == 'false'){
-    $(".login-form").css({"animation": "shake .3s","border": "1px","border-color": "red"})
-    
-
-}

@@ -86,7 +86,7 @@ header a:nth-child(1)::after{
     border-radius: 0.8rem;
     background-color: var(--white);
     margin: 0 2rem;
-    width: 600px;
+    width: 700px;
 }
 
 .card{
@@ -99,13 +99,16 @@ header a:nth-child(1)::after{
 }
 
 .buttons{
-    position: absolute;
-    bottom: 0;
-    justify-content: end;
+    
+    margin: 1rem 1.2rem;
 }
 
 .card button{
     width: fit-content;
+}
+
+.confirm-btn{
+    visibility: hidden;
 }
 
 .links{
