@@ -51,6 +51,9 @@ router.patch('/:email', getUser, async (req, res) => {
     if(req.body.telefono != null){
         res.user.telefono = req.body.telefono
     }
+    if(req.body.indirizzo != null){
+        res.user.indirizzo = req.body.indirizzo
+    }
 
     try{
         const updateUser = await res.user.save()

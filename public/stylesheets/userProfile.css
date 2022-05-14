@@ -98,6 +98,12 @@ header a:nth-child(1)::after{
     position: relative;
 }
 
+.card p{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
 .buttons{
     margin: 1rem 1.2rem;
 }
@@ -122,6 +128,10 @@ header a:nth-child(1)::after{
     font-weight: bold;
 }
 
+
+.update-info{
+    visibility: hidden;
+}
 
 
 /* ANIMATIONS */

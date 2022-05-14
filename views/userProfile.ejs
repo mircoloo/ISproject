@@ -28,39 +28,49 @@
           <div class="grp">
             <span class="title">INDIRIZZO</span>
             <span class="content"><%= user.indirizzo %></span>
+            <input class="update-info" type="text" name="" id="update-indirizzo-input">
           </div>
           <div class="grp">
             <span class="title">TELEFONO</span>
             <span class="content"><%= user.telefono %></span>
+            <input class="update-info" type="text" name="" id="update-telefono-input">
           </div>
           <div class="grp">
             <span class="title">EMAIL</span>
             <span class="content" id="email-span"><%= user.email %></span>
+            <input class="update-info" type="text" name="" id="update-email-input">
           </div>
           <div class="buttons">
             <button id="info-modify-btn">Modifica</button>
-            <button id="bike-confirm-btn confirm-btn">Conferma</button>
+            <button id="info-confirm-btn" class="confirm-btn">Conferma</button>
+            
           </div>
         </div>
         <div class="bike-info card">
           <div class="grp">
             <span class="title">BIKE</span>
+            <input class="update-info" type="text" name="" id="">
             <span class="content">
-                <ul>
+              
                     <% user.bikes.forEach(bike => { %> 
-                        <li><%= bike %></li> 
+                        <p><%= bike %></p> 
                     <% }) %>
-                </ul>
+                
                 
             </span>
           </div>
           <div class="grp">
             <span class="title">E-BIKE</span>
-            <span class="content">SANTA CRUZ</span>
+            <input class="update-info" type="text" name="" id="">
+            <span class="content">
+              <% user.ebikes.forEach(ebike => { %> 
+              <p><%= ebike %></p> 
+              <% }) %>
+            </span>
           </div>
           <div class="buttons">
             <button id="bike-modify-btn">Modifica</button>
-            <button id="bike-confirm-btn confirm-btn">Conferma</button>
+            <button id="bike-confirm-btn" class="confirm-btn">Conferma</button>
           </div>
         </div>
       </div>
