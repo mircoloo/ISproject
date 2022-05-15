@@ -54,8 +54,15 @@ router.patch('/:email', getUser, async (req, res) => {
     if(req.body.indirizzo != null){
         res.user.indirizzo = req.body.indirizzo
     }
+    if(req.body.bikes != null){
+        res.user.bikes.push(req.body.bikes)
+    }
+    if(req.body.ebikes != null){
+        res.user.ebikes.push(req.body.ebikes)
+    }
 
     try{
+        
         const updateUser = await res.user.save()
         res.json(updateUser)
     }catch(err){

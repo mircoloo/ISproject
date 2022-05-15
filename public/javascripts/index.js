@@ -9,10 +9,14 @@ $(document).ready(function () {
   });
 
   $("#info-confirm-btn").click(() => {
+
+    /* let nome_upd = $("#update-indirizzo-input").val();
+    let cognom_upd = $("#update-email-input").val(); */
     let indirizzo_upd = $("#update-indirizzo-input").val();
     let email_upd = $("#update-email-input").val();
     let telefono_upd = $("#update-telefono-input").val();
-
+    let bikes_upd = $("#add-bike-input").val();
+    let ebikes_upd = $("#add-ebike-input").val();
 
     var data = {};
 
@@ -21,6 +25,12 @@ $(document).ready(function () {
     if(email_upd != '') data['email'] = email_upd;
 
     if(telefono_upd != '') data['telefono'] = telefono_upd;
+
+    if(bikes_upd != '') data['bikes'] = bikes_upd;
+
+    if(ebikes_upd != '') data['ebikes'] = ebikes_upd;
+
+
     let email = $("#email-span").text();
     $.ajax({
       url: "/users/" + email,
@@ -31,7 +41,8 @@ $(document).ready(function () {
     });
     $(".update-info").css({ visibility: "hidden" });
     $("#info-confirm-btn").css({ visibility: "hidden" });
-    
+    $("input").reset()
+    //window.location = window.location.href;
   });
 });
 

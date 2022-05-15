@@ -49,7 +49,7 @@
         <div class="bike-info card">
           <div class="grp">
             <span class="title">BIKE</span>
-            <input class="update-info" type="text" name="" id="">
+            <input class="update-info" id="add-bike-input" type="text" name="">
             <span class="content">
               
                     <% user.bikes.forEach(bike => { %> 
@@ -61,7 +61,7 @@
           </div>
           <div class="grp">
             <span class="title">E-BIKE</span>
-            <input class="update-info" type="text" name="" id="">
+            <input class="update-info" id="add-ebike-input" type="text" name="" >
             <span class="content">
               <% user.ebikes.forEach(ebike => { %> 
               <p><%= ebike %></p> 
@@ -69,8 +69,8 @@
             </span>
           </div>
           <div class="buttons">
-            <button id="bike-modify-btn">Modifica</button>
-            <button id="bike-confirm-btn" class="confirm-btn">Conferma</button>
+            <!-- <button id="bike-modify-btn">Modifica</button>
+            <button id="bike-confirm-btn" class="confirm-btn">Conferma</button> -->
           </div>
         </div>
       </div>
